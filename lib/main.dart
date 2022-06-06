@@ -20,7 +20,19 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.amberAccent,
             items: bottomNavBar),
         appBar: AppBar(
-          title: const Text('Material App Bar'),
+          title: Container(
+            width: double.infinity,
+            height: 40,
+            color: Colors.white,
+            child: const Center(
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search),
+                ),
+              ),
+            ),
+          ),
         ),
         body: Center(
           child: Container(
