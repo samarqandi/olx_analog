@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olx_analog/bottom_nav_bar.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,50 +7,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+        primarySwatch: Colors.teal,
+      ),
       title: 'Material App',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
             unselectedItemColor: Colors.black26,
             selectedItemColor: Colors.black54,
-            backgroundColor: Colors.amber,
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home_outlined,
-                  color: Colors.black87,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.favorite_border,
-                  color: Colors.black87,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.add_circle_outline,
-                  color: Colors.black87,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.messenger,
-                  color: Colors.black87,
-                ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.person_pin_outlined,
-                  color: Colors.black87,
-                ),
-                label: '',
-              ),
-            ]),
+            backgroundColor: Colors.amberAccent,
+            items: bottomNavBar),
         appBar: AppBar(
           title: const Text('Material App Bar'),
         ),
