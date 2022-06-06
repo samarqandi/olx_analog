@@ -7,6 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
             unselectedItemColor: Colors.black26,
@@ -14,24 +15,39 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.amber,
             items: const [
               BottomNavigationBarItem(
-                icon: Icon(Icons.abc),
-                label: 'home',
+                icon: Icon(
+                  Icons.home_outlined,
+                  color: Colors.black87,
+                ),
+                label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.abc),
-                label: 'home',
+                icon: Icon(
+                  Icons.favorite_border,
+                  color: Colors.black87,
+                ),
+                label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.abc),
-                label: 'home',
+                icon: Icon(
+                  Icons.add_circle_outline,
+                  color: Colors.black87,
+                ),
+                label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.abc),
-                label: 'home',
+                icon: Icon(
+                  Icons.messenger,
+                  color: Colors.black87,
+                ),
+                label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.abc),
-                label: 'home',
+                icon: Icon(
+                  Icons.person_pin_outlined,
+                  color: Colors.black87,
+                ),
+                label: '',
               ),
             ]),
         appBar: AppBar(
