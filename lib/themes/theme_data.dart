@@ -26,9 +26,13 @@ final themeData = ThemeData(
     ),
   ),
   hintColor: Colors.white,
-  textTheme: TextTheme(),
+  textTheme: TextTheme(
+    headline5: TextStyle(color: Colors.white),
+    bodyText2: TextStyle(color: Colors.white),
+  ),
   appBarTheme: AppBarTheme(
     backgroundColor: Colors.greenAccent,
+    shadowColor: Colors.transparent,
   ),
   backgroundColor: Colors.green,
   primaryColor: Colors.white,
