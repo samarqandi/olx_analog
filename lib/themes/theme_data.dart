@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 final themeData = ThemeData(
+  buttonTheme: ButtonThemeData(
+    shape: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+    ),
+  ),
   primaryTextTheme: TextTheme(),
   inputDecorationTheme: const InputDecorationTheme(
+    focusColor: Colors.white,
+    prefixIconColor: Colors.white,
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(
         color: Colors.white,

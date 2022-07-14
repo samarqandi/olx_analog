@@ -9,12 +9,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppNavigation.initialRoute,
       routes: AppNavigation.routes,
+      initialRoute: AppNavigation.defaultRoute,
       theme: themeData,
-      home: Scaffold(
-        appBar: AppBar(),
-      ),
     );
   }
 }
