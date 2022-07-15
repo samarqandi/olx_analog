@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:olx_analog/ui/main/category_list_widget.dart';
+import 'package:olx_analog/ui/main/new_products_widget.dart';
+import 'package:olx_analog/ui/main/popular_products_widget.dart';
+import 'package:olx_analog/ui/main/recommends_list_widget.dart';
 
 class Main extends StatelessWidget {
   const Main({Key? key}) : super(key: key);
@@ -31,77 +35,57 @@ class Main extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                Container(
-                  margin: EdgeInsets.only(left: 16, top: 12, bottom: 12),
-                  height: 150,
-                  width: 250,
-                  child: ListView.separated(
-                    primary: true,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(Radius.circular(18)),
-                        ),
-                        width: 290,
-                        height: 20,
-                        constraints: const BoxConstraints(
-                          maxHeight: 20,
-                          maxWidth: 250,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 50),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text('test'),
-                              SizedBox(height: 10),
-                              OutlinedButton(
-                                style: ButtonStyle(
-                                  shape: MaterialStateProperty.all(
-                                    RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(15)),
-                                  ),
-                                  minimumSize: MaterialStateProperty.all(
-                                      const Size(120, 36)),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  'press',
-                                  style: Theme.of(context).textTheme.bodyText2,
-                                ),
-                              ),
-                            ],
+                const RecommendsListWidget(),
+                const CategoryListWidget(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'New Product',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: Text('See All'),
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
                           ),
                         ),
-                      );
-                    },
-                    itemCount: 15,
-                    separatorBuilder: (BuildContext context, int index) {
-                      return SizedBox(width: 10);
-                    },
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
+                const NewProductsWidget(),
+                Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Popular Product',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        shape: MaterialStateProperty.all(
+                          const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                          ),
+                        ),
+                      ),
+                      child: const Text('See All'),
+                    ),
+                  ],
+                ),
+                const PopularProductsWidget(),
                 Container(
                   color: Colors.black,
                   height: 100,
                 ),
                 Container(
                   color: Colors.blue,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.green,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.indigo,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.white,
                   height: 100,
                 ),
                 Container(
