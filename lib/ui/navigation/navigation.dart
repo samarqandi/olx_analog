@@ -1,11 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:olx_analog/ui/main/main_page.dart';
+import 'package:olx_analog/ui/navigation/app_routes.dart';
 import 'package:olx_analog/ui/sign_up/sign_up.dart';
 
 abstract class AppNavigation {
-  static final defaultRoute = '/'; //: (context) => Main();
+  static const initialRoute = AppRoutes.initialRoute;
   static final routes = <String, Widget Function(BuildContext context)>{
-    '/': (context) => const Main(),
-    '/sign_up': (context) => const SignUp(),
+    AppRoutes.home: (context) => const Main(),
+    AppRoutes.signUp: (context) => const SignUp(),
   };
 }

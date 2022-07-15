@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/create_button.dart';
+import 'widgets/sign_in_row.dart';
+import 'widgets/tradly_text_field.dart';
+
 class SignUp extends StatelessWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -19,74 +23,25 @@ class SignUp extends StatelessWidget {
                 'Signup to your account',
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
-              SizedBox(height: 18),
-              Column(
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'First Name',
-                    ),
-                  ),
-                  SizedBox(height: 18),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Last Name',
-                    ),
-                  ),
-                  SizedBox(height: 18),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Email / Phone Number',
-                    ),
-                  ),
-                  SizedBox(height: 18),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                    ),
-                  ),
-                  SizedBox(height: 18),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: 'Re-enter Password',
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 18),
-              Container(
-                constraints: BoxConstraints(
-                  minHeight: 50,
-                  minWidth: 300,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(18)),
-                  color: Colors.white,
-                ),
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Create',
-                    style: TextStyle(color: Colors.greenAccent),
-                  ),
-                  style: ButtonStyle(
-                    maximumSize: MaterialStateProperty.all(const Size(200, 60)),
-                  ),
+              Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Column(
+                  children: const [
+                    TradlyTextFieldWidget(labelText: 'First Name'),
+                    SizedBox(height: 18),
+                    TradlyTextFieldWidget(labelText: 'Last Name'),
+                    SizedBox(height: 18),
+                    TradlyTextFieldWidget(labelText: 'Email / Phone Number'),
+                    SizedBox(height: 18),
+                    TradlyTextFieldWidget(labelText: 'Password'),
+                    SizedBox(height: 18),
+                    TradlyTextFieldWidget(labelText: 'Re-enter Password'),
+                  ],
                 ),
               ),
-              SizedBox(height: 18),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Have an account ?'),
-                  TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Sign in',
-                        style: Theme.of(context).textTheme.bodyText2,
-                      )),
-                ],
-              ),
+              const CreateButtonWidget(),
+              const SizedBox(height: 18),
+              const SignInRowWidget(),
             ],
           ),
         ),
