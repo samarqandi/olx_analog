@@ -81,6 +81,102 @@ class Main extends StatelessWidget {
                 ),
                 const PopularProductsWidget(),
                 Container(
+                  color: Colors.green,
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  child: Column(
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('Store to follow'),
+                          ElevatedButton(
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              shape: MaterialStateProperty.all(
+                                const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(12)),
+                                ),
+                              ),
+                            ),
+                            child: const Text('See All'),
+                          ),
+                          Container(
+                            height: 160,
+                            width: 120,
+                            constraints: const BoxConstraints(
+                              minHeight: 160,
+                              minWidth: 120,
+                            ),
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                borderRadius: BorderRadius.circular(12)),
+                            child: ListView.separated(
+                              primary: true,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Column(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Colors.blue,
+                                      radius: 32,
+                                      child: Text('A'),
+                                    ),
+                                    Text('Tradly Store'),
+                                    ElevatedButton(
+                                      onPressed: () {},
+                                      style: ButtonStyle(
+                                        shape: MaterialStateProperty.all(
+                                          const RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(12)),
+                                          ),
+                                        ),
+                                      ),
+                                      child: const Text('Follow'),
+                                    ),
+                                  ],
+                                );
+                              },
+                              itemCount: 15,
+                              separatorBuilder:
+                                  (BuildContext context, int index) {
+                                return const SizedBox(width: 10);
+                              },
+                            ),
+                            // child: Column(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            //   children: [
+                            //     CircleAvatar(
+                            //       backgroundColor: Colors.blue,
+                            //       radius: 32,
+                            //       child: Text('A'),
+                            //     ),
+                            //     Text('Tradly Store'),
+                            //     ElevatedButton(
+                            //       onPressed: () {},
+                            //       style: ButtonStyle(
+                            //         shape: MaterialStateProperty.all(
+                            //           const RoundedRectangleBorder(
+                            //             borderRadius:
+                            //                 BorderRadius.all(Radius.circular(12)),
+                            //           ),
+                            //         ),
+                            //       ),
+                            //       child: const Text('Follow'),
+                            //     ),
+                            //   ],
+                            // ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
                   color: Colors.black,
                   height: 100,
                 ),
