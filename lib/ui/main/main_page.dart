@@ -102,143 +102,68 @@ class Main extends StatelessWidget {
                             ),
                             child: const Text('See All'),
                           ),
-                          Container(
-                            height: 160,
-                            width: 120,
-                            constraints: const BoxConstraints(
-                              minHeight: 160,
-                              minWidth: 120,
-                            ),
-                            decoration: BoxDecoration(
-                                color: Colors.red,
-                                borderRadius: BorderRadius.circular(12)),
-                            child: ListView.separated(
-                              primary: true,
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    CircleAvatar(
-                                      backgroundColor: Colors.blue,
-                                      radius: 32,
-                                      child: Text('A'),
-                                    ),
-                                    Text('Tradly Store'),
-                                    ElevatedButton(
-                                      onPressed: () {},
-                                      style: ButtonStyle(
-                                        shape: MaterialStateProperty.all(
-                                          const RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(12)),
-                                          ),
+                        ],
+                      ),
+                      Container(
+                        height: 100,
+                        width: double.infinity,
+                        constraints: const BoxConstraints(
+                          minHeight: 160,
+                          minWidth: 120,
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(12)),
+                        child: ListView.separated(
+                          shrinkWrap: true,
+                          primary: true,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              margin: EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Colors.indigo,
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              constraints: BoxConstraints(
+                                minWidth: 160,
+                                minHeight: 200,
+                              ),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  const CircleAvatar(
+                                    maxRadius: 32,
+                                    minRadius: 32,
+                                    backgroundColor: Colors.blue,
+                                    child: Text('A'),
+                                  ),
+                                  const Text('Tradly Store'),
+                                  ElevatedButton(
+                                    onPressed: () {},
+                                    style: ButtonStyle(
+                                      shape: MaterialStateProperty.all(
+                                        const RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(12)),
                                         ),
                                       ),
-                                      child: const Text('Follow'),
                                     ),
-                                  ],
-                                );
-                              },
-                              itemCount: 15,
-                              separatorBuilder:
-                                  (BuildContext context, int index) {
-                                return const SizedBox(width: 10);
-                              },
-                            ),
-                            // child: Column(
-                            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            //   children: [
-                            //     CircleAvatar(
-                            //       backgroundColor: Colors.blue,
-                            //       radius: 32,
-                            //       child: Text('A'),
-                            //     ),
-                            //     Text('Tradly Store'),
-                            //     ElevatedButton(
-                            //       onPressed: () {},
-                            //       style: ButtonStyle(
-                            //         shape: MaterialStateProperty.all(
-                            //           const RoundedRectangleBorder(
-                            //             borderRadius:
-                            //                 BorderRadius.all(Radius.circular(12)),
-                            //           ),
-                            //         ),
-                            //       ),
-                            //       child: const Text('Follow'),
-                            //     ),
-                            //   ],
-                            // ),
-                          ),
-                        ],
+                                    child: const Text('Follow'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                          itemCount: 15,
+                          separatorBuilder: (BuildContext context, int index) {
+                            return const SizedBox(width: 2);
+                          },
+                        ),
                       ),
                     ],
                   ),
-                ),
-                Container(
-                  color: Colors.black,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.blue,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.amberAccent,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.blueGrey,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.brown,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.red,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.red,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.black,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.blue,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.green,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.indigo,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.white,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.amberAccent,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.blueGrey,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.brown,
-                  height: 100,
-                ),
-                Container(
-                  color: Colors.red,
-                  height: 100,
                 ),
               ],
             ),
