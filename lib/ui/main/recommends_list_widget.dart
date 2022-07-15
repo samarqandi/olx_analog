@@ -6,7 +6,7 @@ class RecommendsListWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16, top: 12, bottom: 12),
+      margin: const EdgeInsets.only(left: 16, top: 12, bottom: 12),
       height: 150,
       width: 250,
       child: ListView.separated(
