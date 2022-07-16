@@ -14,11 +14,11 @@ class WishList extends StatelessWidget {
         child: Container(
           constraints: const BoxConstraints(
             maxWidth: 150,
-            maxHeight: 230,
+            maxHeight: 200,
           ),
           decoration: BoxDecoration(
             border: Border.all(color: Colors.grey, width: 1.5),
-            color: Colors.white,
+            color: Colors.grey,
             borderRadius: BorderRadius.circular(18),
           ),
           child: Column(
@@ -36,25 +36,23 @@ class WishList extends StatelessWidget {
                   ),
                 ),
                 constraints:
-                    const BoxConstraints(maxHeight: 150, maxWidth: 150),
+                    const BoxConstraints(maxHeight: 120, maxWidth: 150),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(12.0),
                 child: Text('Apple'),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: const [
-                    Icon(Icons.paid, color: Colors.green),
-                    SizedBox(width: 10),
-                    Text('Tradly', textAlign: TextAlign.start),
-                    SizedBox(width: 25),
-                    Text('\$25', textAlign: TextAlign.end),
-                  ],
-                ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  SizedBox(width: 10),
+                  Icon(Icons.paid, color: Colors.green),
+                  SizedBox(width: 2),
+                  Text('Tradly', textAlign: TextAlign.start),
+                  SizedBox(width: 25),
+                  Text('\$25', textAlign: TextAlign.end),
+                ],
               ),
             ],
           ),
