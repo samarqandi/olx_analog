@@ -33,10 +33,10 @@ class NewProductsList extends StatelessWidget {
                   maxWidth: 150,
                 ),
               ),
-              Text('Coca-Cola'),
+              const Text('Coca-Cola'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: const [
                   Icon(Icons.paid),
                   Text('Tradly', textAlign: TextAlign.start),
                   Text('\$25', textAlign: TextAlign.end),

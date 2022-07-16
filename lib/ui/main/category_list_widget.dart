@@ -29,13 +29,13 @@ class CategoryListWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10, top: 50),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('test'),
+                    children: const [
+                      Text('test'),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: 2),
+              const SizedBox(height: 2),
               Container(
                 decoration: const BoxDecoration(
                   color: Colors.blue,
@@ -50,8 +50,8 @@ class CategoryListWidget extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 10, top: 50),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text('test'),
+                    children: const [
+                      Text('test'),
                     ],
                   ),
                 ),

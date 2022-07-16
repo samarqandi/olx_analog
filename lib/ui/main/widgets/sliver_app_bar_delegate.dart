@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:olx_analog/ui/navigation/app_routes.dart';
 
 import 'search_product.dart';
 
@@ -24,7 +25,8 @@ class SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
               ),
               const Expanded(child: SizedBox()),
               IconButton(
-                  onPressed: () {},
+                  onPressed: () =>
+                      Navigator.of(context).pushNamed(AppRoutes.wishList),
                   icon: const Icon(Icons.favorite, color: Colors.white)),
               IconButton(
                   onPressed: () {},

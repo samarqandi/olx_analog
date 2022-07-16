@@ -31,17 +31,19 @@ class Main extends StatelessWidget {
               [
                 const RecommendsListWidget(),
                 const CategoryListWidget(),
-                const PreCategoryTitleAndButton(
+                PreCategoryTitleAndButton(
                   categoryName: 'New Products',
                   buttonLabelText: 'See All',
                   standardStyle: false,
+                  onButtonPressed: () {},
                 ),
                 const NewProductsList(),
                 const Divider(),
-                const PreCategoryTitleAndButton(
+                PreCategoryTitleAndButton(
                   categoryName: 'Popular Products',
                   buttonLabelText: 'See All',
                   standardStyle: false,
+                  onButtonPressed: () {},
                 ),
                 const PopularProductsList(),
                 Container(
@@ -49,12 +51,14 @@ class Main extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
                   child: Column(
-                    children: const [
+                    children: [
                       PreCategoryTitleAndButton(
-                          categoryName: 'Store\'s to follow',
-                          buttonLabelText: 'See All',
-                          standardStyle: true),
-                      StoresToFollowList(),
+                        categoryName: 'Store\'s to follow',
+                        buttonLabelText: 'See All',
+                        standardStyle: true,
+                        onButtonPressed: () {},
+                      ),
+                      const StoresToFollowList(),
                     ],
                   ),
                 ),

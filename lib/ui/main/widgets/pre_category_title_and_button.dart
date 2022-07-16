@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class PreCategoryTitleAndButton extends StatelessWidget {
   final String categoryName;
   final String buttonLabelText;
+  final VoidCallback onButtonPressed;
   final bool standardStyle;
 
   const PreCategoryTitleAndButton({
@@ -10,6 +11,7 @@ class PreCategoryTitleAndButton extends StatelessWidget {
     required this.categoryName,
     required this.buttonLabelText,
     required this.standardStyle,
+    required this.onButtonPressed,
   }) : super(key: key);
 
   @override
@@ -24,7 +26,7 @@ class PreCategoryTitleAndButton extends StatelessWidget {
               : Theme.of(context).textTheme.headline6,
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: onButtonPressed,
           style: ButtonStyle(
             shape: MaterialStateProperty.all(
               const RoundedRectangleBorder(

@@ -33,10 +33,10 @@ class PopularProductsList extends StatelessWidget {
                   maxWidth: 150,
                 ),
               ),
-              Text('Fish'),
+              const Text('Fish'),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: const [
                   Icon(Icons.paid),
                   Text('Tradly', textAlign: TextAlign.start),
                   Text('\$15', textAlign: TextAlign.end),
