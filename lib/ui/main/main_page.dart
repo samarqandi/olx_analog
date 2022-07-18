@@ -29,8 +29,7 @@ class Main extends StatelessWidget {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                const RecommendsListWidget(),
-                const CategoryListWidget(),
+                const RecommendsListWidget(),const CategoryListWidget(),
                 PreCategoryTitleAndButton(
                   categoryName: 'New Products',
                   buttonLabelText: 'See All',
