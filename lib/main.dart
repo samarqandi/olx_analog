@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:olx_analog/app.dart';
+import 'presentation/presentation.dart';
 
-void main() => runApp(const App());
+void main(List<String> args) {
+  WidgetsFlutterBinding.ensureInitialized();
+  const app = MyApp();
+  runApp(app);
+}
